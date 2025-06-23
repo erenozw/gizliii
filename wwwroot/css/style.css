@@ -1,0 +1,46 @@
+﻿/* Genel Ayarlar ve Ortalama */
+body {
+    display: flex; /* İçeriği flexbox ile düzenle */
+    justify-content: center; /* Yatayda ortala */
+    align-items: center; /* Dikeyde ortala */
+    min-height: 100vh; /* Ekranın tam yüksekliğini kapla */
+    margin: 0; /* Varsayılan boşlukları kaldır */
+    background-color: #f0e6ef; /* Açık mor-pembe arka plan rengi */
+    font-family: 'Arial', sans-serif; /* Yazı tipi */
+    overflow: hidden; /* Sayfada kaydırma çubuklarını engelle */
+}
+
+/* Tüm içeriği kapsayan ana container */
+.container {
+    text-align: center; /* İçindeki metin ve inline elemanları ortala */
+    position: relative; /* İçindeki mutlak konumlandırılmış elemanlar için referans noktası */
+}
+
+/* Kapalı zarfın stil tanımı */
+.envelope-closed {
+    width: 250px;
+    height: 150px;
+    background-color: #ffb6c1; /* Açık pembe zarf rengi */
+    border-radius: 10px; /* Köşeleri yuvarla */
+    position: relative; /* Kalp ve açılma animasyonu için */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hafif gölge */
+    cursor: pointer; /* Fare imlecini el olarak göster */
+    transition: transform 0.5s ease-in-out; /* Animasyon geçişi */
+}
+
+/* Zarfın açılma animasyonu sırasında uygulanacak stil */
+.envelope-open {
+    transform: translateY(-50px) rotateX(10deg); /* Hafif yukarı ve öne doğru hareket */
+}
+
+/* Kalp simgesinin stil tanımı */
+.heart {
+    width: 60px;
+    height: 60px;
+    background-color: #e74c3c; /* Kırmızı kalp rengi */
+    position: absolute; /* Zarf üzerinde konumlandır */
+    top: 50%; /* Zarfın dikeyde ortası */
+    left: 50%; /* Zarfın yatayda ortası */
+    transform: translate(-50%, -50%) rotate(-45deg); /* Kendi merkezine göre ortala ve döndürerek kalp şeklini ver */
+    border-radius: 50%
+}
